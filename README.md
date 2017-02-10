@@ -1,9 +1,9 @@
 # Nginx configuration for running Shopware
 
 This is an example configuration for running [Shopware](https://github.com/shopware/shopware) using
-[nginx](http://nginx.org). Which is a high-performance non-blocking HTTP server.
+[nginx](http://nginx.org) with [http2](https://en.wikipedia.org/wiki/HTTP/2). Which is a high-performance non-blocking HTTP server.
 
-This configuration is fork of [bcremers nginx configuration for Shopware](https://github.com/bcremer/shopware-with-nginx).
+This configuration is a fork of [bcremers nginx configuration for Shopware](https://github.com/bcremer/shopware-with-nginx).
 
 ## Warning
 Please only use nginx if you know what you are doing. Shopware AG provides no support for running nginx as appserver. 
