@@ -10,7 +10,7 @@ Please only use nginx if you know what you are doing. Shopware AG provides no su
 Also note that Shopware will not run faster with nginx. A properly configured apache webserver is in most cases as fast as nginx.
 
 ## Compatibility
-This configuration is tested with Shopware 5.1 or later.
+This configuration is tested with Shopware 5.1 or later and PHP-FPM 7.0.
 
 ## Installation
 
