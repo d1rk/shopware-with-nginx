@@ -1,13 +1,12 @@
 # Nginx configuration for running Shopware
 
-This is an example configuration from running [Shopware](https://github.com/shopware/shopware) using
+This is an example configuration for running [Shopware](https://github.com/shopware/shopware) using
 [nginx](http://nginx.org). Which is a high-performance non-blocking HTTP server.
 
-This configuration is heavily inspired by [perusio's](https://github.com/perusio/drupal-with-nginx/) drupal-configuration.
+This configuration is fork of [bcremers nginx configuration for Shopware](https://github.com/bcremer/shopware-with-nginx).
 
 ## Warning
 Please only use nginx if you know what you are doing. Shopware AG provides no support for running nginx as appserver. 
-Also note that Shopware will not run faster with nginx. A properly configured apache webserver is in most cases as fast as nginx.
 
 ## Compatibility
 This configuration is tested with Shopware 5.1 or later, NGINX 1.10.3 and PHP-FPM 7.0.15.
