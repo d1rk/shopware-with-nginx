@@ -10,7 +10,7 @@ Please only use nginx if you know what you are doing. Shopware AG provides no su
 Also note that Shopware will not run faster with nginx. A properly configured apache webserver is in most cases as fast as nginx.
 
 ## Compatibility
-This configuration is tested with Shopware 5.1 or later and PHP-FPM 7.0.
+This configuration is tested with Shopware 5.1 or later, NGINX 1.10.3 and PHP-FPM 7.0.15.
 
 ## Installation
 
@@ -29,4 +29,10 @@ This configuration is tested with Shopware 5.1 or later and PHP-FPM 7.0.
     ln -s ../sites-available/example.com.conf /etc/nginx/sites-enabled/
     ```
     
-6. Reload nginx
+6. Generate fresh Diffie-Hellman parameters
+
+    ```
+    openssl dhparam -out /etc/ssl/dhparams2048.pem 2048
+    ```
+    
+7. Reload nginx
