@@ -36,3 +36,6 @@ sed -i -e "s/worker_processes auto/worker_processes $procs/" /etc/nginx/nginx.co
 
 letsencrypt certonly -a webroot --agree-tos --webroot-path=/var/www -d $DOMAIN -d www.$DOMAIN
 
+rm -rf /var/www
+curl -#L https://s3-eu-west-1.amazonaws.com/releases.s3.shopware.com/Downloader/index.php -o /var/www/index.php
+chown www-data:www-data www/
