@@ -50,3 +50,12 @@ letsencrypt certonly -a webroot --agree-tos --webroot-path=/var/www -d $DOMAIN -
 rm -rf /var/www
 curl -#L https://s3-eu-west-1.amazonaws.com/releases.s3.shopware.com/Downloader/index.php -o /var/www/index.php
 chown www-data:www-data www/
+
+
+
+php recovery/install/index.php --no-interaction --quiet --no-skip-import --db-host="localhost" --db-user="shopware" --db-password="athooghoJ6Eoj5EKocuB" --db-name="shopware" --shop-locale="de_DE" --shop-host="HOST" --shop-path="/PFAD" --shop-name="SHOPNAME" --shop-email="EMAIL" --shop-currency="EUR" --admin-username="ADMIN-USERNAME" --admin-password="ADMIN-PASSWORT" --admin-email="ADMIN-EMAIL" --admin-name="ADMIN-NAME" --admin-locale="de_DE"
+
+# auto-update
+# php recovery/update/index.php --no-interaction --quiet && rm -r update-assets/
+
+
