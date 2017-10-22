@@ -17,7 +17,7 @@ This configuration is tested with Shopware 5.1 or later, NGINX 1.10.3 and PHP-FP
 2. Clone the git repository from github:
 
     ```
-    git clone https://github.com/ahuckenbeck/shopware-with-nginx.git /etc/nginx
+    git clone https://github.com/d1rk/shopware-with-nginx.git /etc/nginx
     ```
     
 3. Setup the PHP-FPM upstream in `conf.d/upstream.conf`
