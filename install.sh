@@ -1,4 +1,5 @@
 DOMAIN='example.com'
+MYSQL_SHOPWARE_PASS=$(pwgen 20 -1)
 
 apt-get update
 apt-get upgrade
@@ -44,8 +45,11 @@ ln -s /etc/nginx/sites-available/$DOMAIN.conf /etc/nginx/sites-enabled/$DOMAIN
 procs=$(cat /proc/cpuinfo |grep processor | wc -l)
 sed -i -e "s/worker_processes auto/worker_processes $procs/" /etc/nginx/nginx.conf
 
+# service nginx stop
 
 letsencrypt certonly -a webroot --agree-tos --webroot-path=/var/www -d $DOMAIN -d www.$DOMAIN
+
+ln -s /etc/nginx/sites-available/$DOMAIN.conf /etc/nginx/sites-enabled/$DOMAIN
 
 rm -rf /var/www
 curl -#L https://s3-eu-west-1.amazonaws.com/releases.s3.shopware.com/Downloader/index.php -o /var/www/index.php
@@ -57,5 +61,3 @@ php recovery/install/index.php --no-interaction --quiet --no-skip-import --db-ho
 
 # auto-update
 # php recovery/update/index.php --no-interaction --quiet && rm -r update-assets/
-
-
